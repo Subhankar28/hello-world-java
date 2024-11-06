@@ -11,8 +11,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Pull the code from GitHub
-                git 'https://github.com/yourusername/hello-world-java.git'
+                script {
+                    // Checkout from the default branch (replace 'main' with your branch if needed)
+                    checkout scm
+                }
             }
         }
 
